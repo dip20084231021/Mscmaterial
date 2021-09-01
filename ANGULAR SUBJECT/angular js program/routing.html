@@ -1,0 +1,43 @@
+<html>
+    
+	
+	<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    
+	</head>
+
+   
+   <body ng-app="myApp">
+
+
+
+			<a href="#!login">login</a>
+			<a href="#!home">home</a>
+			<a href="#!contact">contact</a>
+
+			<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/login", {
+        templateUrl : "login.html",
+    })
+    .when("/home", {
+        templateUrl : "home.html",
+    })
+    .when("/contact", {
+        templateUrl : "contact.html"
+    });
+    
+});
+</script>
+
+
+</body>
+</html>
+
+

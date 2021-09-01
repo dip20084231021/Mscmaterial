@@ -1,0 +1,59 @@
+<html>
+
+      <head>
+	  
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	  </head>
+  
+      <body ng-app="mymodule">
+	  
+	     <div ng-controller="mycontroller">
+		 
+		   <button ng-click="show()">Show $log</button>
+		    <button ng-click="show2()">Show $error</button>
+			<button ng-click="show3()">Show $info</button>
+		    <button ng-click="show4()">Show $warning</button>
+		 
+
+         </div>
+
+
+    </body>
+
+</html>
+
+<script>
+
+var app=angular.module("mymodule",[]);
+
+var c=function($scope,$window,$log)
+   {
+       $scope.show=function()
+	   {
+	      //var name=$window.prompt("enter your name:");
+		  //$window.alert("your name is:"+name);
+		   $log.log('This is log.');
+		   }
+		   $scope.show2=function()
+	        {
+	      //var name=$window.prompt("enter your name:");
+		  //$window.alert("your name is:"+name);
+		       $log.error('This is error.');
+		   }
+		   $scope.show3=function()
+	        {
+	      //var name=$window.prompt("enter your name:");
+		  //$window.alert("your name is:"+name);
+		         $log.info('This is info.');
+		   }
+		    $scope.show4=function()
+	        {
+	      //var name=$window.prompt("enter your name:");
+		  //$window.alert("your name is:"+name);
+		         $log.warn('This is warning.');
+		   }	  
+		  
+	}
+app.controller("mycontroller",c);	
+
+</script>

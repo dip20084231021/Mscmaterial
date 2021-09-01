@@ -1,0 +1,91 @@
+<html>
+
+
+     <head>
+	 
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	 </head>
+	 
+	 <body ng-app="mymodule">
+        <h3>Uppercase Filter </h3>
+		 Name: <input type="text" ng-model="name"><br>
+		      <h3>ans:{{name | uppercase}}</h3><br>
+	    <h3>Lowercase Filter</h3>
+		 Name: <input type="text" ng-model="name1"><br>
+		  <h3>ans:{{name1 | lowercase}}</h3><br>
+         
+		 <h3>Currency Filter</h3>
+		 Price: <input type="text" ng-model="price"><br>
+		 	<h3>ans:{{(price | currency:"INR")}}</h3>
+			<br>
+			
+			<h3>Number Filter</h3>
+		 Price: <input type="text" ng-model="price1"><br>
+		 	<h3>ans:{{(price1 | number)}}</h3>
+			<br><br>
+			
+			<h3>Date Filter</h3>
+			<div ng-controller="mycontroller">
+			<h3>ans:{{today | date}}</h3>
+			</div>
+			<div ng-controller="mycontroller">
+			<h3> Name OrderBy Filter<//h3>
+	         <table border="3px">
+		 
+		      <thead>
+
+                   <tr>
+				   
+				       <th style="font-size:18px;">Name</th>
+					   <th style="font-size:18px;">Gender</th>
+					   <th style="font-size:18px;">City</th>
+				   
+				   
+				   </tr>
+			  
+			  </thead>
+			  
+			  <tbody>
+			      
+			     <tr ng-repeat="x in employee | orderBy:'name'">
+				    <td style="font-size:18px;">{{x.name}}</td>
+					<td style="font-size:18px;">{{x.gender}}</td>
+					 <td style="font-size:18px;">{{x.city}}</td> 
+				 
+			     </tr>
+		 
+	          </tbody>
+	     </table>
+	  </div>
+		    
+     </body>
+</html>
+
+<script>
+
+ var app=angular.module("mymodule",[])
+ 
+ var myc=function($scope)
+ {
+     var employee=[
+	   {name:'deep',gender:'male',city:'idar'},
+	   {name:'athrav',gender:'male',city:'surat'},
+	   {name:'pooja',gender:'female',city:'kadi'},
+	   {name:'vividha',gender:'female',city:'idar'},
+	   {name:'kavan',gender:'male',city:'mehsana'},
+	   {name:'neha',gender:'female',city:'rajkot'},
+	   {name:'bhumi',gender:'female',city:'patan'}
+	   ];
+	   $scope.employee=employee;
+	   $scope.today=new Date();
+	   
+}
+app.controller("mycontroller",myc);
+
+     
+
+
+
+
+
+</script>

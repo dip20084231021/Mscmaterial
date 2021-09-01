@@ -1,0 +1,74 @@
+<Html>  
+		<head>  
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>		
+			<title>  
+				Registration Page  
+			</title>  
+		</head>  
+<body ng-app="mymodule" ng-controller="mycontroller">  
+		
+ <h3>Registration Form</h3>		
+	<form>  
+              
+			<label> Firstname:</label>         
+			<input type="text" name="firstname" size="15" ng-model="firstname">  
+			  {{firstname}}<br><br>
+			  
+			<label> Lastname: </label>         
+			<input type="text" name="lastname" size="15" ng-model="lastname">  
+              {{lastname}}<br><br>
+
+			<label>   
+			Gender :  
+			</label><br>  
+		     <input type="radio" id="male" name="gender" value="male" ng-model="gender">Male
+			
+			<input type="radio" id="female" name="gender" value="female" ng-model="gender">Female
+		
+			<input type="radio" id="other" name="gender" value="other">Other
+			
+              <h3>{{gender}}</h3>
+			<br>  
+			<br>  
+  
+			<label>   
+			Phone :  
+			</label>  
+			<input type="text" name="country code"  value="+91" size="2"/>   
+			<input type="text" name="phone" size="10"/> <br> <br>  
+			Address  
+			<br>  
+			<textarea cols="50" rows="5" value="address">  
+			</textarea>  
+			<br> <br>  
+			Email:  
+			<input type="email" id="email" name="email"/> <br>    
+			<br> <br>  
+			Password:  
+			<input type="Password" id="pass" name="pass"> <br>   
+			<br> <br>  
+			Re-type password:  
+			<input type="Password" id="repass" name="repass"> <br> <br>  
+			<input type="button" value="Submit"/>  
+		</form>  
+	
+	</body>  
+</html> 
+
+<script>
+
+ var app=angular.module("mymodule",[])
+ 
+ var myc=function($scope)
+ {
+      $scope.firstname="deep";
+	  $scope.lastname="patel";
+	  $scope.gender="male";
+	  $scope.gender="female";
+	   
+}
+app.controller("mycontroller",myc); 
+
+
+
+</script>

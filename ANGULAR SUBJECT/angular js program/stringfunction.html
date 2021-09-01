@@ -1,0 +1,76 @@
+<html>
+
+      <head>
+	  
+	  <script>
+	   
+	    function len()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.length;
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+	  function upper()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.toUpperCase();
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+		 function lower()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.toLowerCase();
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+		function charAt()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.charAt(7);
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+		function replace()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.replace("hello","beatiful");
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+		function substring()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.substring(3,7);
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+		function trim()
+		{
+		   var str=document.getElementById("text_1").value;
+		   var s=str.trim();
+		   document.getElementById("lab_1").innerHTML=s;
+        }
+	  
+	  
+	   </script>
+	  
+	  </head>
+	  
+	  
+	  <body>
+    	  
+             Enter String:-
+			 <input type="text" name="string" id="text_1"><br><br>
+			 
+			 <input type="button" value="Length" id="btn1" onclick="len()">
+			 <input type="button" value="Upper" id="btn2" onclick="upper()">
+			 <input type="button" value="Lower" id="btn3" onclick="lower()">
+			 <input type="button" value="CharAt" id="btn4" onclick="charAt()">
+			 <input type="button" value="Replace" id="btn5" onclick="replace()">
+			 <input type="button" value="substring" id="btn6" onclick="substring()">
+			 <input type="button" value="trim" id="btn7" onclick="trim()">
+			 <br><br>
+			 <label>Answer Here:-</label>
+			 <label id="lab_1"></label>
+
+
+
+     </body>
+
+</html>

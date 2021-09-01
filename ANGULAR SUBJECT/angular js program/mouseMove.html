@@ -1,0 +1,53 @@
+<html>
+
+       <head>
+	   
+	   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	   
+	   </head>
+	   
+	   
+	   <body ng-app="mymodule">
+	   
+	        <!--mouse move example-->
+	   
+	         <div ng-controller="mycontroller">
+			 
+			 <h3 ng-model="event">mouse Move example:</h3>
+			 
+			 
+			<button ng-mousemove="message()">Mouse Move!</button><br>
+
+              <h3>ans:{{count}}</h3>
+             
+            </div>
+
+       </body>
+
+</html>
+
+<script>
+
+var app=angular.module("mymodule",[]);
+
+var c=function($scope)
+  {
+    $scope.count=0;
+	
+	$scope.message=function(value)
+      {
+           $scope.count++;
+		    
+     }		   
+	   
+  
+
+  }
+  
+
+app.controller("mycontroller",c);
+
+
+
+
+</script>

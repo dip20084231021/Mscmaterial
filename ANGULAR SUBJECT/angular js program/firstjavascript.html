@@ -1,0 +1,185 @@
+<html>
+
+ <head>
+  <script>
+   
+   document.write("Arithmetic Operator","<br>");
+   var a=10;
+   var b=20;
+   
+   sum=a+b;
+   document.write("sum="+sum,"<br>");
+   
+   document.write("Relational Operator","<br>");
+   var a=10;
+   var b=20;
+   
+   if(a>b){
+   
+     document.write("a is greater");
+	 }
+	 else
+	 {
+	        document.write("b is greater");
+	 }
+   
+   document.write("Logical Operator","<br>");
+   var a=10>5;
+   var b=20>22;
+   
+     var c=a && b;
+
+     document.write("anwser is=",c);	 
+  
+   
+   
+   document.write("if statement example:-","<br>");
+   
+   var a=10;
+   
+   if(a==10)
+   {
+      document.write("right condition","<br>");
+   }
+ document.write("wrong condition");	
+
+   
+   document.write("if else statement example:-","<br>");
+    var a=10;
+   
+   if(a%2==0)
+   {
+      document.write("Ans:-",+a," Even No");
+   }
+   else{
+   
+    document.write("Ans:-",+a," Odd No");	 
+   }
+   
+     
+   document.write("else if statement example:-","<br>");
+    var result=70;
+   
+   if(result <=30)
+   {
+      document.write("fail");
+   }
+   else if(result <=50)
+   {
+   
+    document.write("pass");	 
+   }
+   else{
+    
+	 document.write("very good");
+   } 
+   
+   
+   document.write("Switch Statement Example:-","<br>");
+   
+   var day=6;
+   switch(day)
+    {
+	     case 1:
+		 document.write("sun");
+		 break;
+		 
+		 case 2:
+		 document.write("mon");
+		 break;
+		 
+		 case 3:
+		 document.write("tus");
+		 break;
+		 
+		 default:
+		 document.write("wrong");
+		 
+		} 
+  
+  
+  
+  document.write("For Loop Example:-","<br>");
+  
+  
+  for(i=0;i<=5;i++)
+    {
+	     document.write(i+"<br>");
+	
+	}
+	
+	
+	document.write("While Loop Example:-","<br>");
+	
+	var a=0;
+	while(a<5)
+	{
+	   document.write(a);
+	   a++;
+	   document.write("<br>");
+	 } 
+  
+  
+   
+	document.write("Do While Loop Example:-","<br>");
+	
+	var a=0;
+	do
+	{
+	   document.write(a);
+	   a++;
+	   document.write("<br>");
+	 } 
+	 while(a<5);
+ 
+ 
+    
+	document.write("Function Example:-","<br>");
+	
+     function display()
+	 {
+	 
+	   var a=20,b=30;
+	   c=a+b;
+	   document.write("sum:-",+c);
+	   
+	 
+	 }
+     display(); 
+	 
+	 
+	 document.write("Function Parameter Example:-","<br>");
+	
+     function display(a,b)
+	 {
+	 
+	
+	   c=a+b;
+	   document.write("sum:-",+c);
+	   
+	 
+	 }
+     display(10,20);
+	 
+	 
+	  document.write("Function Return Example:-","<br>");
+	
+     function display(a,b)
+	 {
+	
+	     return a+b;   
+	 
+	 }
+    document.write(display(10,20));
+ 
+ 
+ 
+ 
+ </script>
+ </head>
+ 
+ <body>
+
+  </body>
+
+</html>

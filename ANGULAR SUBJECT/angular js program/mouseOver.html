@@ -1,0 +1,49 @@
+<html>
+
+       <head>
+	   
+	   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	   
+	   </head>
+	   
+	   
+	   <body ng-app="mymodule">
+	   
+	        <!--mouse over example-->
+	   
+	         <div ng-controller="mycontroller">
+			 
+			 <h3>mouse over example:</h3>
+			 
+			 
+			<h1 ng-mousemove="message($event)">Mouse Over Me!</h1>
+
+              <h4>Coordinates: {{x + ', ' + y}}</h4>
+             
+            </div>
+
+       </body>
+
+</html>
+
+<script>
+
+var app=angular.module("mymodule",[]);
+
+var c=function($scope)
+  {
+    
+	
+	$scope.message=function(myE)
+      {
+           $scope.x=myE.clientX;
+		   $scope.y=myE.clientY;
+		    
+     }		   
+  }
+  
+
+app.controller("mycontroller",c);
+
+
+</script>
